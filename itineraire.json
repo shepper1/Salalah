@@ -1,0 +1,282 @@
+{
+  "pays": "Oman",
+  "drapeau": "🇴🇲",
+  "symbole": "🌿",
+  "titre": "Salalah: L'Oasis Verte du Khareef",
+  "budget_total": "2100€",
+  "duree": "8 jours",
+  "temps_vol": "Environ 10-12h (avec escale depuis Paris)",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée et Premiers Pas à Salalah",
+      "legende": "Après un long voyage, prenez le temps de vous installer et de vous imprégner de l'atmosphère paisible de Salalah. Une balade légère le long de la côte vous permettra de vous détendre et de commencer à découvrir les charmes de cette ville côtière.",
+      "lieu": "Salalah",
+      "activites": [
+        "🛬 <strong>Arrivée à Salalah</strong>: Atterrissage à l'aéroport international de Salalah et transfert vers votre hôtel pour vous rafraîchir et vous installer confortablement.",
+        "🛏️ <strong>Installation à l'hôtel</strong>: Prenez possession de votre chambre et profitez d'un moment de repos après le vol, avant de débuter l'exploration.",
+        "🚶‍♂️ <strong>Balade sur la plage d'Al Haffa</strong>: Une promenade relaxante le long de cette plage bordée de cocotiers, idéale pour sentir la brise marine et observer les pêcheurs locaux."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Visa pour Oman",
+          "texte": "Un e-visa est obligatoire pour les citoyens français. Pensez à l'obtenir en ligne avant votre départ pour éviter tout désagrément à l'arrivée."
+        },
+        {
+          "symbole": "💱",
+          "titre": "Monnaie locale",
+          "texte": "La monnaie est le Rial Omanais (OMR). Il est conseillé de changer un peu d'argent à l'aéroport ou dans les banques en ville."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🏛️",
+      "titre": "Histoire et Culture de Salalah",
+      "legende": "Plongez dans le riche passé de Salalah, une ville au carrefour des civilisations et du commerce de l'encens. Entre vestiges antiques et architecture moderne, cette journée vous offre un aperçu fascinant de l'héritage omanais.",
+      "lieu": "Salalah",
+      "activites": [
+        "🏛️ <strong>Parc Archéologique d'Al Baleed</strong>: Explorez les ruines de l'ancienne ville portuaire de Zafar, classée au patrimoine mondial de l'UNESCO, témoin de l'importance du commerce de l'encens.",
+        "📜 <strong>Musée de la Terre de l'Encens</strong>: Situé dans le parc d'Al Baleed, ce musée retrace l'histoire maritime d'Oman et l'importance de l'encens dans la région.",
+        "🕌 <strong>Grande Mosquée du Sultan Qaboos</strong>: Admirez l'architecture élégante de cette mosquée moderne, un chef-d'œuvre de l'art islamique omanais, ouverte aux non-musulmans en dehors des heures de prière."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "👗",
+          "titre": "Tenue vestimentaire",
+          "texte": "Pour la mosquée, les femmes doivent couvrir leurs cheveux, leurs bras et leurs jambes. Les hommes doivent porter des pantalons longs. Des abayas sont souvent disponibles à l'entrée."
+        },
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Le soleil peut être intense même pendant le Khareef. N'oubliez pas chapeau, lunettes de soleil et crème solaire."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🌊",
+      "titre": "Merveilles Naturelles de l'Ouest",
+      "legende": "Partez à la découverte des paysages côtiers spectaculaires à l'ouest de Salalah. Des plages immaculées aux falaises escarpées, en passant par des phénomènes naturels uniques, cette journée est une ode à la beauté sauvage du Dhofar.",
+      "lieu": "Ouest de Salalah",
+      "activites": [
+        "🏖️ <strong>Plage d'Al Mughsail et ses geysers</strong>: Profitez de cette magnifique plage de sable blanc et observez les impressionnants geysers naturels (blowholes) qui jaillissent des rochers.",
+        "⛰️ <strong>Marneef Cave</strong>: Explorez cette grotte naturelle offrant des vues panoramiques sur l'océan et les falaises environnantes, un lieu idéal pour des photos mémorables.",
+        "🚗 <strong>Route panoramique de Fazayah</strong>: Empruntez la route sinueuse qui mène à la plage de Fazayah, offrant des points de vue époustouflants sur les criques isolées et les eaux turquoise."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "👟",
+          "titre": "Chaussures confortables",
+          "texte": "Prévoyez des chaussures de marche confortables pour explorer les sites et les plages rocheuses."
+        },
+        {
+          "symbole": "💧",
+          "titre": "Hydratation",
+          "texte": "Emportez suffisamment d'eau, surtout lors des excursions où les points de ravitaillement sont rares."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏞️",
+      "titre": "Vallées Verdoyantes et Cascades",
+      "legende": "Aventurez-vous dans l'arrière-pays verdoyant du Dhofar, où les wadis se transforment en oasis luxuriantes pendant le Khareef. Cascades, lacs et végétation dense vous attendent pour une immersion totale dans la nature.",
+      "lieu": "Est de Salalah",
+      "activites": [
+        "🌳 <strong>Wadi Darbat</strong>: Explorez cette vallée spectaculaire, célèbre pour ses cascades saisonnières, ses lacs naturels et sa végétation luxuriante, idéale pour un pique-nique.",
+        "💧 <strong>Ayn Razat</strong>: Visitez cette source d'eau douce naturelle, nichée dans un jardin verdoyant, un lieu de fraîcheur et de tranquillité très apprécié des locaux.",
+        "🍍 <strong>Plantation de fruits tropicaux</strong>: Découvrez les plantations locales où poussent bananes, papayes et noix de coco, et dégustez des fruits frais directement cueillis."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🏊",
+          "titre": "Baignade",
+          "texte": "Certains wadis offrent des possibilités de baignade. Prévoyez un maillot de bain et une serviette si vous souhaitez vous rafraîchir."
+        },
+        {
+          "symbole": "🦟",
+          "titre": "Anti-moustiques",
+          "texte": "Dans les zones humides et verdoyantes comme les wadis, les moustiques peuvent être présents. Un répulsif est recommandé."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🏺",
+      "titre": "Sur les Traces de l'Encens",
+      "legende": "Cette journée est dédiée à l'encens, l'\"or blanc\" d'Oman, qui a fait la richesse de la région. Des arbres sacrés aux marchés traditionnels, suivez le chemin de cette résine précieuse et découvrez son importance culturelle et économique.",
+      "lieu": "Salalah et environs",
+      "activites": [
+        "🌲 <strong>Arbres à encens de Wadi Dawkah</strong>: Visitez ce site classé au patrimoine mondial de l'UNESCO, où poussent les arbres à encens, et apprenez-en plus sur leur culture et la récolte de la résine.",
+        "🛍️ <strong>Souk Al Haffa (souk de l'encens)</strong>: Flânez dans ce souk traditionnel où l'air est imprégné du parfum de l'encens. Vous y trouverez différentes qualités d'encens, des brûleurs et des parfums locaux.",
+        "👑 <strong>Palais du Sultan Qaboos (extérieur)</strong>: Admirez l'architecture imposante du palais du Sultan Qaboos depuis l'extérieur, un symbole de la modernité et de la grandeur d'Oman."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": " bargaining",
+          "titre": "Négociation",
+          "texte": "La négociation est une pratique courante dans les souks. N'hésitez pas à marchander pour obtenir le meilleur prix, toujours avec le sourire."
+        },
+        {
+          "symbole": "👃",
+          "titre": "Qualité de l'encens",
+          "texte": "L'encens d'Oman est réputé pour sa qualité. Demandez à sentir les différentes variétés et renseignez-vous sur leurs usages."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🍽️",
+      "titre": "Détente et Saveurs Locales",
+      "legende": "Après plusieurs jours d'exploration intense, profitez d'une journée plus relaxante. Détendez-vous sur une plage moins fréquentée, savourez la cuisine locale et plongez dans l'ambiance authentique du marché central de Salalah.",
+      "lieu": "Salalah",
+      "activites": [
+        "🌴 <strong>Plage de Dahariz</strong>: Passez la matinée sur cette plage paisible, idéale pour la baignade ou simplement pour se détendre sous les palmiers.",
+        "🦐 <strong>Déjeuner de fruits de mer frais</strong>: Dégustez un délicieux repas de fruits de mer fraîchement pêchés dans l'un des restaurants locaux de Salalah.",
+        "🌶️ <strong>Souk Central de Salalah</strong>: Explorez ce marché animé où les locaux achètent leurs produits frais, épices, dattes et autres spécialités. Une immersion garantie dans la vie quotidienne."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🍲",
+          "titre": "Spécialités culinaires",
+          "texte": "Goûtez au Shuwa (agneau cuit lentement), au Harees (plat de blé et viande) ou aux dattes locales, souvent servies avec du café omanais."
+        },
+        {
+          "symbole": "☕",
+          "titre": "Café omanais",
+          "texte": "Le café omanais (Kahwa) est une boisson traditionnelle parfumée à la cardamome, souvent offerte en signe d'hospitalité."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "⛰️",
+      "titre": "Montagnes et Panoramas",
+      "legende": "Élevez-vous au-dessus de la plaine côtière pour découvrir les paysages montagneux du Dhofar. Des points de vue à couper le souffle aux rencontres avec la faune locale, cette journée offre une perspective différente sur la beauté de la région.",
+      "lieu": "Montagnes du Dhofar",
+      "activites": [
+        "🔭 <strong>Jebel Samhan (point de vue)</strong>: Montez au sommet de Jebel Samhan pour admirer des panoramas spectaculaires sur les vallées verdoyantes et l'océan Indien, un lieu idéal pour l'observation des oiseaux.",
+        "💧 <strong>Ayn Khor (cascade saisonnière)</strong>: Si la saison le permet (Khareef), visitez cette magnifique cascade nichée dans les montagnes, un spectacle naturel impressionnant.",
+        "🐪 <strong>Observation des chameaux</strong>: Sur les routes de montagne, vous croiserez souvent des troupeaux de chameaux en liberté, offrant des opportunités uniques de photos."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🚗",
+          "titre": "Conduite en montagne",
+          "texte": "Certaines routes de montagne peuvent être sinueuses et escarpées. Conduisez prudemment et soyez attentif aux animaux sur la route."
+        },
+        {
+          "symbole": "🌡️",
+          "titre": "Températures",
+          "texte": "Les températures en altitude peuvent être légèrement plus fraîches qu'en ville. Prévoyez une veste légère, surtout le matin ou en fin de journée."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🛫",
+      "titre": "Derniers Instants et Départ",
+      "legende": "Profitez de vos dernières heures à Salalah pour quelques achats de souvenirs ou une dernière dégustation. Il est temps de dire au revoir à cette oasis verdoyante et de vous préparer pour votre vol retour, la tête pleine de souvenirs.",
+      "lieu": "Salalah",
+      "activites": [
+        "🎁 <strong>Achats de dernière minute</strong>: Profitez de la matinée pour acheter les derniers souvenirs, comme de l'encens, des épices ou de l'artisanat local.",
+        "☕ <strong>Dernier café omanais</strong>: Savourez un dernier café traditionnel dans un café local, pour prolonger un peu l'ambiance omanais.",
+        "🛫 <strong>Transfert à l'aéroport</strong>: Départ de l'hôtel et transfert vers l'aéroport international de Salalah pour votre vol retour vers Paris."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "💼",
+          "titre": "Bagages",
+          "texte": "Vérifiez les restrictions de poids et de taille de vos bagages à main et en soute avant de vous rendre à l'aéroport."
+        },
+        {
+          "symbole": "✈️",
+          "titre": "Heure d'arrivée à l'aéroport",
+          "texte": "Prévoyez d'arriver au moins 2 à 3 heures avant l'heure de votre vol international pour les formalités d'enregistrement et de sécurité."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "750€/pers (Vol A/R Paris-Salalah avec escale, classe éco)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "330€/pers (Location voiture 4x4 pour 7 jours, essence incluse)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "320€/pers (8 jours, restaurants locaux et quelques repas plus élaborés)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "550€/pers (7 nuits en hôtel 3 étoiles, base chambre double)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "150€/pers (Entrées sites, guides locaux occasionnels, activités spécifiques)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de juin à septembre pour le Khareef (saison des pluies et de la verdure), ou d'octobre à mai pour un temps ensoleillé et chaud.",
+      "symbole": "🌿"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "Un visa électronique (e-visa) est obligatoire pour les citoyens français. Il doit être obtenu en ligne avant le départ.",
+      "symbole": "🛂"
+    },
+    {
+      "titre": "La monnaie est le Rial Omanais (OMR). Les cartes de crédit sont acceptées dans les grands établissements, mais prévoyez du liquide pour les petits commerces et les souks.",
+      "symbole": "💳"
+    },
+    {
+      "titre": "La location d'un véhicule (idéalement un 4x4) est fortement recommandée pour explorer la région de Salalah en toute liberté. Le permis français est généralement suffisant, mais un permis international est conseillé.",
+      "symbole": "🚗"
+    },
+    {
+      "titre": "Respectez les coutumes locales: habillez-vous modestement (épaules et genoux couverts) en dehors des plages, surtout lors de la visite de lieux de culte.",
+      "symbole": "🕌"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Informations officielles et inspirations de voyage",
+      "titre": "Tourisme Oman",
+      "url": "https://experienceoman.om/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Portail pour l'obtention du visa électronique",
+      "titre": "E-Visa Oman",
+      "url": "https://evisa.rop.gov.om/",
+      "symbole": "🌐"
+    },
+    {
+      "legende": "Prévisions météo détaillées pour Salalah",
+      "titre": "Météo Salalah",
+      "url": "https://www.accuweather.com/fr/om/salalah/260902/weather-forecast/260902",
+      "symbole": "🌤️"
+    }
+  ]
+}
