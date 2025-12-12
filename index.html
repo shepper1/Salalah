@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Éclat Mystérieux de Salalah </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée et Premiers Pas à Salalah</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Trésors de l'Est de Salalah</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Merveilles Naturelles de l'Ouest</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Montagnes Verdoyantes et Wadis Cachés</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Aventure aux Portes du Désert</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Salalah, Cœur Historique et Culturel</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Journée Libre et Détente</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Départ de Salalah</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/shepper1/Salalah/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">SALALAH</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">L'Éclat Mystérieux de Salalah</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 8 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 2100€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 Environ 10h avec escale depuis Marseille, France</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée et Premiers Pas à Salalah</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, installez-vous confortablement et laissez-vous imprégner de l'atmosphère paisible de Salalah. Une balade légère le long de la côte vous permettra de vous acclimater en douceur à la douceur du climat omanais et d'admirer les premières vues sur l'océan Indien. Prenez le temps de vous reposer et de savourer l'instant présent.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à Salalah</strong>: Atterrissez à l'aéroport international de Salalah et effectuez les formalités d'entrée. Un transfert vous mènera à votre hôtel pour une installation en toute sérénité.</li><li>🛏️ <strong>Installation à l'hôtel</strong>: Prenez possession de votre chambre d'hôtel 3 étoiles. Profitez des équipements pour vous rafraîchir et vous détendre après le vol.</li><li>🚶‍♂️ <strong>Balade côtière relaxante</strong>: Promenez-vous le long de la plage de Salalah, admirez le coucher de soleil sur l'océan Indien et imprégnez-vous de l'ambiance locale. C'est une excellente façon de commencer votre séjour en douceur.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Salalah/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Visa pour Oman</p>
+                                <p class="text-gray-700">Les citoyens français ont besoin d'un visa pour entrer à Oman. Il est recommandé de l'obtenir en ligne (e-visa) avant votre départ pour faciliter les formalités à l'arrivée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Monnaie locale</p>
+                                <p class="text-gray-700">La monnaie est le Rial Omanais (OMR). Les cartes de crédit sont acceptées dans la plupart des hôtels et grands magasins, mais prévoyez du liquide pour les petits commerces et les marchés locaux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Trésors de l'Est de Salalah</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Partez à la découverte des trésors historiques et naturels de l'est de Salalah. Des cités antiques aux villages de pêcheurs pittoresques, cette journée vous plongera dans le riche passé maritime et la beauté sauvage de la région, avec des paysages côtiers à couper le souffle. Une immersion culturelle et historique vous attend.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏰 <strong>Visite du Château de Taqah</strong>: Explorez cette forteresse bien préservée, ancienne résidence du Wali (gouverneur) de Taqah. Découvrez son architecture traditionnelle et les objets du quotidien qui témoignent de la vie locale d'antan.</li><li>🏛️ <strong>Site archéologique de Sumhuram (Khor Rori)</strong>: Plongez dans l'histoire de l'ancienne cité portuaire de Sumhuram, classée au patrimoine mondial de l'UNESCO. Ce site était un point névralgique du commerce de l'encens, offrant des vues imprenables sur la lagune.</li><li>漁 <strong>Exploration du village de pêcheurs de Mirbat</strong>: Flânez dans les ruelles de ce charmant village, connu pour ses maisons traditionnelles et son port animé. Observez les pêcheurs locaux et imprégnez-vous de l'atmosphère authentique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Salalah/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Location de voiture</p>
+                                <p class="text-gray-700">Une voiture de location (4x4 recommandée pour certaines zones) est essentielle pour explorer la région de Salalah en toute liberté. Les routes sont en bon état, mais certaines pistes peuvent être rocailleuses.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📜 L'encens d'Oman</p>
+                                <p class="text-gray-700">Le Dhofar est le berceau de l'encens, une résine précieuse qui a fait la richesse de la région pendant des millénaires. Vous en trouverez partout, du souk aux sites historiques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Merveilles Naturelles de l'Ouest</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aventurez-vous vers l'ouest pour explorer des plages immaculées, des falaises impressionnantes et les célèbres arbres à encens. Cette journée combine détente au bord de l'eau et immersion dans la nature unique de la région, berceau de l'or blanc d'Oman. Préparez-vous à des paysages côtiers spectaculaires.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏖️ <strong>Détente à Mughsail Beach</strong>: Profitez de la longue plage de sable blanc de Mughsail, bordée de falaises majestueuses. C'est un endroit idéal pour se promener et admirer la beauté naturelle.</li><li>💨 <strong>Les "Blowholes" de Marneef Cave</strong>: Découvrez les geysers marins naturels près de la grotte de Marneef. L'eau s'y engouffre et jaillit spectaculairement par des trous dans la roche, surtout en période de forte houle.</li><li>🌳 <strong>Découverte des arbres à encens</strong>: Visitez la vallée de Wadi Dawkah, classée à l'UNESCO, où poussent des milliers d'arbres à encens. Apprenez-en davantage sur la récolte de cette résine précieuse et son histoire.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Salalah/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Le soleil peut être intense, même en hiver. N'oubliez pas votre crème solaire, un chapeau et des lunettes de soleil, et hydratez-vous régulièrement.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Meilleur moment pour les blowholes</p>
+                                <p class="text-gray-700">Les "blowholes" sont plus impressionnants pendant la saison de la mousson (Khareef) ou lorsque la mer est agitée, offrant des jets d'eau plus hauts et plus fréquents.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Montagnes Verdoyantes et Wadis Cachés</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez à la chaleur côtière en montant dans les montagnes verdoyantes du Dhofar. Découvrez des wadis luxuriants, des cascades rafraîchissantes et des panoramas spectaculaires, offrant un contraste saisissant avec les paysages désertiques et côtiers. Une journée de fraîcheur et de splendeur naturelle vous attend au cœur de la nature omanaise.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>💧 <strong>Exploration de Wadi Darbat</strong>: Passez la matinée dans ce magnifique wadi, célèbre pour ses lacs permanents, ses cascades (surtout après la saison des pluies) et sa végétation luxuriante. Vous pourrez y faire un pique-nique ou une balade en bateau.</li><li>⛰️ <strong>Ascension vers Jabal Samhan</strong>: Montez vers le plateau de Jabal Samhan, l'un des plus hauts sommets du Dhofar. Profitez de vues panoramiques époustouflantes sur la côte et les vallées environnantes, un spectacle grandiose.</li><li>👀 <strong>Observation des chameaux et de la faune</strong>: Sur les plateaux montagneux, vous aurez de grandes chances de croiser des troupeaux de chameaux et d'autres animaux sauvages en liberté, ajoutant une touche authentique à votre exploration.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Salalah/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌧️ Saison du Khareef</p>
+                                <p class="text-gray-700">Pendant la saison du Khareef (juin à septembre), les montagnes se couvrent d'une brume verdoyante et les cascades sont à leur apogée. Les paysages sont alors particulièrement spectaculaires.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Chaussures confortables</p>
+                                <p class="text-gray-700">Prévoyez des chaussures de marche confortables pour explorer les wadis et les sentiers de montagne. Certaines zones peuvent être glissantes ou inégales.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Aventure aux Portes du Désert</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans l'immensité du désert du Rub' al Khali, le "Quart Vide". Une excursion mémorable vous attend, entre dunes majestueuses et silence absolu, pour une expérience authentique des paysages désertiques grandioses. Préparez-vous à des vues inoubliables et à une immersion totale dans la culture bédouine.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚙 <strong>Excursion dans le Rub' al Khali</strong>: Partez pour une excursion d'une journée vers les confins du Rub' al Khali, le plus grand désert de sable du monde. Admirez les dunes imposantes et le silence impressionnant de cet environnement unique.</li><li>🐪 <strong>Rencontre avec les bédouins et chameaux</strong>: Observez les chameaux paître dans le désert et, si l'occasion se présente, rencontrez des bédouins locaux. C'est une opportunité d'en apprendre davantage sur leur mode de vie traditionnel.</li><li>🌅 <strong>Coucher de soleil sur les dunes</strong>: Terminez votre journée par un coucher de soleil spectaculaire sur les dunes du désert. Les couleurs changeantes du ciel offrent un spectacle inoubliable et une atmosphère magique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Salalah/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Sécurité dans le désert</p>
+                                <p class="text-gray-700">Il est fortement recommandé de faire cette excursion avec un guide local expérimenté ou une agence spécialisée. Ne vous aventurez jamais seul dans le désert.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👕 Vêtements adaptés</p>
+                                <p class="text-gray-700">Portez des vêtements légers et amples pour vous protéger du soleil. Prévoyez une écharpe pour vous protéger du sable et une veste légère pour le soir, car les températures peuvent chuter.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Salalah, Cœur Historique et Culturel</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Consacrez cette journée à l'exploration approfondie de Salalah, son cœur vibrant et son patrimoine. Du souk traditionnel aux sites archéologiques classés à l'UNESCO, vous découvrirez l'âme de la ville, ses parfums enivrants et son histoire millénaire. Une immersion complète dans la culture omanaise vous attend.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Flânerie au Souk Al Haffa</strong>: Plongez dans l'ambiance animée du souk traditionnel d'Al Haffa. Vous y trouverez de l'encens, des parfums, des tissus, des bijoux et de l'artisanat local. N'hésitez pas à marchander avec le sourire.</li><li>🕌 <strong>Visite de la Grande Mosquée du Sultan Qaboos</strong>: Admirez l'architecture impressionnante de la mosquée principale de Salalah. Respectez le code vestimentaire (épaules et genoux couverts, foulard pour les femmes) pour la visite.</li><li> ruins <strong>Découverte du Parc Archéologique d'Al Baleed</strong>: Explorez les ruines de l'ancienne ville portuaire d'Al Baleed, un autre site UNESCO majeur. Visitez le musée de la Terre de l'Encens pour approfondir vos connaissances sur l'histoire et la culture d'Oman.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Salalah/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤝 L'art du marchandage</p>
+                                <p class="text-gray-700">Au souk, le marchandage est une tradition. Faites-le avec respect et bonne humeur. C'est une partie de l'expérience culturelle.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👗 Code vestimentaire</p>
+                                <p class="text-gray-700">Lors de la visite de sites religieux, il est essentiel de s'habiller modestement. Les femmes doivent couvrir leurs cheveux, leurs épaules et leurs genoux. Les hommes doivent porter des pantalons longs.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée Libre et Détente</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une journée plus détendue pour vous ressourcer. Que ce soit sur une plage isolée, en explorant un marché local pour des souvenirs de dernière minute, ou simplement en savourant la tranquillité de votre hôtel, cette journée est dédiée à votre bien-être et à la contemplation. C'est l'occasion de revisiter un lieu coup de cœur ou de découvrir un aspect moins connu de Salalah.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏖️ <strong>Détente à Al Fazayah Beach</strong>: Éloignez-vous de la foule et découvrez la plage isolée d'Al Fazayah, réputée pour sa beauté sauvage et ses eaux turquoise. C'est un endroit parfait pour la baignade et la relaxation.</li><li>🐬 <strong>Excursion observation des dauphins (optionnel)</strong>: Embarquez pour une excursion en bateau tôt le matin pour tenter d'apercevoir des dauphins dans leur habitat naturel. Une expérience magique au large des côtes de Salalah.</li><li>🎁 <strong>Achats de souvenirs de dernière minute</strong>: Profitez de cette dernière journée pour acheter des souvenirs supplémentaires au souk ou dans les boutiques locales. L'encens, les parfums et l'artisanat sont des incontournables.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Salalah/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🐠 Vie marine</p>
+                                <p class="text-gray-700">Les eaux autour de Salalah sont riches en vie marine. Si vous aimez la plongée avec tuba ou la plongée, renseignez-vous sur les excursions disponibles pour explorer les récifs coralliens.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Cuisine locale</p>
+                                <p class="text-gray-700">Ne quittez pas Salalah sans avoir goûté aux spécialités locales comme le Shuwa (agneau cuit lentement) ou le Harees (plat de blé et de viande).</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Salalah</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un séjour riche en découvertes et en émotions, il est temps de préparer votre départ. Profitez d'un dernier petit-déjeuner omanais avant de vous rendre à l'aéroport, la tête remplie de souvenirs inoubliables de Salalah et de ses paysages contrastés. Vous emporterez avec vous l'essence de l'hospitalité omanaise et la beauté du Dhofar.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🍳 <strong>Dernier petit-déjeuner omanais</strong>: Savourez un dernier petit-déjeuner à votre hôtel, en profitant des saveurs locales avant votre départ.</li><li>🛍️ <strong>Derniers achats à l'aéroport</strong>: Si le temps le permet, explorez les boutiques hors taxes de l'aéroport de Salalah pour quelques derniers souvenirs ou cadeaux.</li><li>🛫 <strong>Transfert à l'aéroport et vol retour</strong>: Un transfert vous conduira à l'aéroport pour votre vol retour vers Marseille, via votre escale. Prévoyez d'arriver suffisamment à l'avance pour les formalités d'enregistrement.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/shepper1/Salalah/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure d'arrivée à l'aéroport</p>
+                                <p class="text-gray-700">Il est conseillé d'arriver au moins 2 à 3 heures avant l'heure de départ de votre vol international pour l'enregistrement et les contrôles de sécurité.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Confirmation de vol</p>
+                                <p class="text-gray-700">Vérifiez les horaires de votre vol la veille de votre départ, car ils peuvent parfois être sujets à des modifications de dernière minute.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>700€/pers (Vol aller-retour Marseille-Salalah en classe économique avec escale)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>320€/pers (Location de voiture 4x4 pour 8 jours, essence incluse)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>320€/pers (Repas dans des restaurants locaux et de gamme moyenne)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>550€/pers (7 nuits en hôtel 3 étoiles, base chambre double)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>75€/pers (Entrées des sites, excursion désert, activités optionnelles)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois d'Octobre à Novembre et de Février à Mars.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Ces mois offrent des températures agréables (25-30°C) et un ensoleillement optimal, évitant la chaleur intense de l'été et la saison de la mousson (Khareef).</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://shepper1.github.io/Salalah/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://experienceoman.om/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Tourisme Oman</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/om/salalah/280000/weather-forecast/280000" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo Salalah</strong></a></li>
+                    
+                        <li><a href="https://evisa.rop.gov.om/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛂 E-visa Oman</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
